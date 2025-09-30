@@ -37,6 +37,11 @@ jobs:
         run: |
           python generator.py  # ⚙️ ta commande de génération
 
+      - name: Copy static assets
+        run: |
+          mkdir -p build/static
+          cp -r static/* build/static/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
