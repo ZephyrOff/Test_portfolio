@@ -37,6 +37,7 @@ footer { margin-top: 2em; text-align: center; font-size: 0.9em; color: #777; }
   height: 10px;
   border-radius: 5px;
   overflow: hidden;
+  width: 55%;
 }
 
 .progress-fill {

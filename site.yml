@@ -32,7 +32,7 @@ pages:
       hero_title: "👋 Bonjour, je suis Jean Dupont"
       hero_subtitle: "Admin Système & Développeur"
       cta_text: "Voir mes projets"
-      cta_link: "projects.html"
+      cta_link: "projects/index.html"
       intro: "Bienvenue sur mon portfolio. Vous trouverez ici mes projets et mes compétences."
   
   - name: "À propos"
@@ -59,7 +59,7 @@ pages:
       projects:
         - title: "Monitoring Kubernetes"
           desc: "Stack Prometheus + Grafana pour supervision"
-          link: "https://github.com/jean/monitoring"
+          link: "/projects/kubernetes.html"
         - title: "Application FastAPI"
           desc: "API REST + Vue.js + Docker Compose"
           link: "https://github.com/jean/app-fastapi"
