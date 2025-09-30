@@ -1,7 +1,7 @@
 config:
   site_name: "Mon Portfolio"
   author: "Jean Dupont"
-  base_url: "file:///C:/Users/alexandre.pajak-ext/Data/00%20-%20Dev/SSG/"
+  base_url: "https://zephyroff.github.io/Test_portfolio/"
   description: "Admin Système & Développeur - Automatisation, Sécurité, Déploiement"
   output_dir: "build"
   default_template: "base.html"
