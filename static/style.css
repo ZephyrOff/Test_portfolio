@@ -6,9 +6,16 @@ nav a { margin-left: 1em; text-decoration: none; color: #4caf50; }
 .fill { background: #4caf50; height: 8px; border-radius: 4px; }
 footer { margin-top: 2em; text-align: center; font-size: 0.9em; color: #777; }
 
-.project-view { margin: 2em 0; }
+.project-view { 
+  margin: auto;
+  width: 95%;
+}
 .project-view h1 { font-size: 2em; margin-bottom: 0.5em; }
-.project-view .description { margin-bottom: 1em; font-size: 1.1em; color: #555; }
+.project-view .description { 
+  margin-bottom: 1em; 
+  font-size: 1.1em; 
+  color: #d3d3d3;
+}
 
 .project-image img {
   max-width: 100%;
