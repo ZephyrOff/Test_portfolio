@@ -1,7 +1,7 @@
 config:
   site_name: "Mon Portfolio"
   author: "Jean Dupont"
-  base_url: "https://zephyroff.github.io/Test_portfolio/"
+  base_url: "https://expo.apajak.fr/"
   description: "Admin Système & Développeur - Automatisation, Sécurité, Déploiement"
   output_dir: "build"
   default_template: "base.html"
