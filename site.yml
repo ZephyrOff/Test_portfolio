@@ -1,0 +1,84 @@
+config:
+  site_name: "Mon Portfolio"
+  author: "Jean Dupont"
+  base_url: "file:///C:/Users/alexandre.pajak-ext/Data/00%20-%20Dev/SSG/"
+  description: "Admin Système & Développeur - Automatisation, Sécurité, Déploiement"
+  output_dir: "build"
+  default_template: "base.html"
+  theme:
+    color_primary: "#4caf50"
+    font: "Inter, sans-serif"
+    background_color: "#2e3440"
+    color: "#edf0f5"
+  custom_css:
+    h1: 
+      color: "#bf626b"
+    h2: 
+      color: "#ebcb8a"
+    h3: 
+      color: "#a4bf82"
+    h4: 
+      color: "#b58fae"
+    h5: 
+      color: "#8fbdbc"
+    h6: 
+      color: "#6da1c2"
+
+pages:
+  - name: "Accueil"
+    template: "index.html"
+    output: "index.html"
+    context:
+      hero_title: "👋 Bonjour, je suis Jean Dupont"
+      hero_subtitle: "Admin Système & Développeur"
+      cta_text: "Voir mes projets"
+      cta_link: "projects.html"
+      intro: "Bienvenue sur mon portfolio. Vous trouverez ici mes projets et mes compétences."
+  
+  - name: "À propos"
+    template: "page.html"
+    output: "about.html"
+    context:
+      title: "À propos de moi"
+      content: |
+        Passionné par l'automatisation, la sécurité et les architectures scalables,
+        j'ai travaillé sur de nombreux projets alliant infrastructure et développement.
+      skills:
+        - label: "Linux / Bash"
+          level: 90
+        - label: "Docker / Kubernetes"
+          level: 80
+        - label: "Python / FastAPI"
+          level: 85
+
+  - name: "Projets"
+    template: "projects.html"
+    output: "projects/index.html"
+    context:
+      title: "Mes Projets"
+      projects:
+        - title: "Monitoring Kubernetes"
+          desc: "Stack Prometheus + Grafana pour supervision"
+          link: "https://github.com/jean/monitoring"
+        - title: "Application FastAPI"
+          desc: "API REST + Vue.js + Docker Compose"
+          link: "https://github.com/jean/app-fastapi"
+  - name: "Projet Kubernetes"
+    template: "projects_view.html"
+    output: "projects/kubernetes.html"
+    context:
+      project:
+        name: "Monitoring Kubernetes"
+        description: "Mise en place d’une stack Prometheus + Grafana pour superviser un cluster Kubernetes."
+        image: "assets/k8s_dashboard.png"
+        skills:
+          - label: "Kubernetes"
+            level: 85
+          - label: "Prometheus"
+            level: 80
+          - label: "Grafana"
+            level: 75
+          - label: "Ansible"
+            level: 70
+        extra_markdown_content: "Threader.md"
+        github: "https://github.com/jean/monitoring"

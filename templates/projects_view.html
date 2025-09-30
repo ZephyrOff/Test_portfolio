@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="project-view">
+    <h1>{{ project.name }}</h1>
+    <p class="description">{{ project.description }}</p>
+    {% if project.github %}
+    <p class="project-link">
+      🔗 <a href="{{ project.github }}" target="_blank">Voir sur GitHub</a>
+    </p>
+    {% endif %}
+
+    {% if project.image %}
+    <div class="project-image">
+      <img src="{{ base_url }}{{ project.image }}" alt="{{ project.name }}">
+    </div>
+    {% endif %}
+
+    {% if project.skills %}
+    <h2>Compétences nécessaires</h2>
+    <ul class="skills-list">
+      {% for skill in project.skills %}
+      <li class="skill-item">
+        <span class="skill-label">{{ skill.label }}</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: {{ skill.level }}%;"></div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if project.extra_content %}
+    <div class="project-extra-content">
+      {% include project.extra_content %}
+    </div>
+    {% endif %}
+
+    {% if project.extra_markdown_content %}
+    <div id="markdown-content" class="markdown-section" style="display:none;">
+      <!-- rendu Markdown injecté ici -->
+      {{ project.extra_markdown_content | safe }}
+    </div>
+    {% endif %}
+  </section>
+{% endblock %}

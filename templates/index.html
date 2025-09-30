@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="hero">
+    <h2>{{ hero_title }}</h2>
+    <p>{{ hero_subtitle }}</p>
+    <a class="cta" href="{{ cta_link }}">{{ cta_text }}</a>
+  </section>
+  <section class="intro">
+    <p>{{ intro }}</p>
+  </section>
+{% endblock %}

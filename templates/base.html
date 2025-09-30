@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site_name }}</title>
+  <link rel="stylesheet" href="{{ base_url }}static/style.css">
+  <link href="{{ base_url }}static/prism.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style type="text/css">
+    body { 
+      font-family: Inter, 
+      sans-serif; 
+      margin: 2em auto; 
+      max-width: 800px; 
+      {% if theme.color %}
+      color: {{ theme.color }};
+      {% else %}
+      color: #333;
+      {% endif %}
+      {% if theme.background_color %}
+      background-color: {{ theme.background_color }};
+      {% endif %}
+    }
+    
+    {% if custom_css %}
+    {% for element_name, element_data in custom_css.items() %}
+    {{ element_name }} {
+      {% for key, value in element_data.items() %}
+        {{ key }}: {{ value }};
+      {% endfor %}
+    }
+    {% endfor %}
+    {% endif %}
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>{{ site_name }}</h1>
+    <nav>
+      <a href="{{ base_url }}index.html">Accueil</a>
+      <a href="{{ base_url }}about.html">À propos</a>
+      <a href="{{ base_url }}projects/index.html">Projets</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© {{ author }} - {{ site_name }}</p>
+  </footer>
+  <script src="{{ base_url }}static/prism.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const mdContainer = document.getElementById("markdown-content");
+  if (!mdContainer) return;
+
+  const markdown = mdContainer.textContent.trim();
+
+  // Conversion Markdown -> HTML
+  const html = marked.parse(markdown);
+
+  // Injection HTML + rendu final
+  mdContainer.innerHTML = html;
+  mdContainer.style.display = "block";
+  Prism.highlightAllUnder(mdContainer);
+});
+</script>
+
+</body>
+</html>

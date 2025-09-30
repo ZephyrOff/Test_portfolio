@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>{{ title }}</h2>
+  <ul class="projects">
+  {% for project in projects %}
+    <li>
+      <strong>{{ project.title }}</strong> — {{ project.desc }}
+      {% if project.link %}
+      <a href="{{ project.link }}" target="_blank">🔗</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endblock %}

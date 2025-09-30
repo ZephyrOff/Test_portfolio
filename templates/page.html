@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>{{ title }}</h2>
+  <p>{{ content }}</p>
+
+  {% if skills %}
+  <h3>Compétences</h3>
+  <ul>
+    {% for skill in skills %}
+      <li>
+        {{ skill.label }}
+        <div class="bar">
+          <div class="fill" style="width: {{ skill.level }}%"></div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,81 @@
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2em; }
+nav a { margin-left: 1em; text-decoration: none; color: #4caf50; }
+.hero { background: #f8f8f8; padding: 1.5em; border-radius: 8px; }
+.cta { background: #4caf50; color: white; padding: 0.5em 1em; border-radius: 4px; text-decoration: none; }
+.bar { background: #ddd; height: 8px; border-radius: 4px; margin: 4px 0; }
+.fill { background: #4caf50; height: 8px; border-radius: 4px; }
+footer { margin-top: 2em; text-align: center; font-size: 0.9em; color: #777; }
+
+.project-view { margin: 2em 0; }
+.project-view h1 { font-size: 2em; margin-bottom: 0.5em; }
+.project-view .description { margin-bottom: 1em; font-size: 1.1em; color: #555; }
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  margin-bottom: 0.8em;
+}
+
+.skill-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+
+.progress-bar {
+  background: #eee;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #4caf50;
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.project-link a {
+    text-decoration: none;
+    color: #0366d6; /* bleu GitHub */
+    font-weight: 600;
+}
+.project-link a:hover {
+    text-decoration: underline;
+}
+
+code, pre {
+  border-radius: 5px;
+}
+
+code {
+	color: rgb(136, 192, 208);
+	background-color: rgb(59, 66, 82);
+	padding: 0.1em 0.25em;
+	border-radius: 4px;
+}
+
+
+.markdown-section {
+  margin-top: 2em;
+  line-height: 1.6;
+}
+
+.markdown-section pre {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+}
