@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-  <h2>{{ title }}</h2>
+  <h2 class="main-section-title">{{ title }}</h2>
   <ul class="projects">
   {% for project in projects %}
-    <li>
-      <strong>{{ project.title }}</strong> — {{ project.desc }}
-      {% if project.link %}
-      <a href="{{ project.link }}" target="_blank">🔗</a>
-      {% endif %}
+    <li class="project_line">
+    {% if project.link %}<a href="{{ project.link }}">{% endif %}
+      <strong>{{ project.title }}</strong>{{ project.desc }}
+    {% if project.link %}</a>{% endif %}
     </li>
   {% endfor %}
   </ul>

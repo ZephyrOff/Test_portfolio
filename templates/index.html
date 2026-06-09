@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-  <section class="hero">
-    <h2>{{ hero_title }}</h2>
-    <p>{{ hero_subtitle }}</p>
-    <a class="cta" href="{{ cta_link }}">{{ cta_text }}</a>
-  </section>
-  <section class="intro">
-    <p>{{ intro }}</p>
-  </section>
+
+<section class="hero">
+  <div class="hero-eyebrow">Disponible</div>
+  <h2>{{ hero_title }}</h2>
+  <p class="hero-subtitle">{{ hero_subtitle }}</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="{{ base_url }}CV.html">Voir mon CV</a>
+    <a class="btn btn-outline" href="{{ cta_link }}">{{ cta_text }}</a>
+  </div>
+</section>
+
+<p class="intro">{{ intro }}</p>
+
 {% endblock %}
